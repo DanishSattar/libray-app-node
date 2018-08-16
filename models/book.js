@@ -14,11 +14,7 @@ author: {
   type: String,
   required: true
 },
-author: {
-  type: new Date
-  required: true
-  max: 100
-},
+
 
 date: {
   type: Date,
@@ -29,4 +25,4 @@ date: {
 });
 
 
-module.exports = mongoose.model('Product', bookSchema);
+module.exports = mongoose.model('Book', bookSchema);

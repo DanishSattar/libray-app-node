@@ -15,9 +15,12 @@
 // }).listen(8080)
 const express = require('express');
 const bodyParser = require('body-parser');
-//intializing app
-const app=express();
-app.listen(8080,function()
-{
-  console.log('server running');
-});
+const bookRoute = require('./routes/bookRoute.js');
+const userRoute = require('./routes/userRoute');// Imports routes for the products
+
+const app = express();
+app.use('/book', bookRoute);
+app.use('/user',userRoute);
+
+
+module.exports = app;
